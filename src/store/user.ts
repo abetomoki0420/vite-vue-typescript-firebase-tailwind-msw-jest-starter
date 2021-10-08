@@ -1,4 +1,4 @@
-import {ActionTree, GetterTree, Module, MutationTree} from "vuex";
+import { ActionTree, GetterTree, Module, MutationTree } from "vuex";
 import { RootState } from "./index";
 
 interface State {

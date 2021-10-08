@@ -5,17 +5,24 @@
     <div>count API request: {{ count }}</div>
     <BaseButton @click="countUpHandler">Click me to send a request API</BaseButton>
   </div>
+  <div class="mt-4">
+    <BaseForm/>
+  </div>
 </template>
 
 <script lang="ts">
 import { defineComponent, toRefs  } from "vue";
 import Counter from "@/components/Counter.vue";
 import BaseButton from "@/components/BaseButton.vue";
+import BaseForm from "@/components/BaseForm.vue";
+
 
 export default defineComponent({
   components: {
+    BaseForm,
     BaseButton,
     Counter,
+
   },
   emits: ["countUp"],
   props: {
