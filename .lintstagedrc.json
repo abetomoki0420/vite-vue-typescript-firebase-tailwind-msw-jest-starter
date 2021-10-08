@@ -1,0 +1,7 @@
+{
+  "*.{js,ts,vue}": [
+    "npm test",
+    "eslint . --ignore-path .gitignore",
+    "prettier --write"
+  ]
+}

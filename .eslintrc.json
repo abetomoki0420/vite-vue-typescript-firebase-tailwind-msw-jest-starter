@@ -1,0 +1,20 @@
+{
+  "parser": "vue-eslint-parser",
+  "env": {
+    "browser": false,
+    "es2021": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 12,
+    "sourceType": "module"
+  },
+  "extends": [
+    "plugin:vue/vue3-recommended",
+    "prettier"
+  ],
+  "plugins": [
+    "vue"
+  ],
+  "rules": {
+  }
+}
