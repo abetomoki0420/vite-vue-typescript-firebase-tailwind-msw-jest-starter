@@ -4,9 +4,7 @@ import { useStore } from "vuex";
 const useCount = () => {
   const store = useStore();
   
-  const count = computed( () => {
-    return store.getters.count
-  })
+  const count = computed<number>( () => store.getters.count )
   
   const fetch = async () => {
     await store.dispatch("fetch")
@@ -16,7 +14,7 @@ const useCount = () => {
     await store.dispatch("countUp")
   }
   
-  return {
+   return {
     count,
     fetch,
     countUp

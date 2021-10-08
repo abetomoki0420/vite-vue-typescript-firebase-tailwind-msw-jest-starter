@@ -8,7 +8,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent  } from "vue";
+import { defineComponent, toRefs  } from "vue";
 import Counter from "@/components/Counter.vue";
 import BaseButton from "@/components/BaseButton.vue";
 
@@ -25,8 +25,7 @@ export default defineComponent({
     }
   },
   setup(props, {emit}) {
-
-    const { count } = props;
+    const { count } = toRefs(props);
 
     const countUpHandler = () => {
       emit("countUp")

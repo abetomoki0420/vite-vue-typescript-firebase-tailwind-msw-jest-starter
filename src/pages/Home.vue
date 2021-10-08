@@ -6,7 +6,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, onMounted , computed } from "vue";
+import { defineComponent, onMounted } from "vue";
 import useCount from "@/composables/count";
 import Home from "@/components/templates/Home.vue";
 
@@ -15,19 +15,15 @@ export default defineComponent({
     Home,
   },
   setup() {
-    const countStore = useCount()
+    const { count, fetch, countUp} = useCount()
 
     onMounted( async () => {
-      await countStore.fetch()
-    })
-
-    const count = computed<number>( () => {
-      return countStore.count.value
+      await fetch()
     })
 
     return {
       count,
-      countUp: countStore.countUp,
+      countUp
     }
   }
 })
