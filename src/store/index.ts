@@ -1,16 +1,19 @@
 import { createStore } from "vuex";
-import count from "./count"
-import user from "./user"
+import count from "./count";
+import user from "./user";
 
 export interface RootState {
-  // empty
+  modules: {
+    count: typeof count;
+    user: typeof user;
+  };
 }
 
 const store = createStore<RootState>({
   modules: {
     count,
-    user
-  }
-})
+    user,
+  },
+});
 
 export default store;
